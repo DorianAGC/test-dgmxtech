@@ -1,0 +1,75 @@
+/* Estilizar el scroll vertical */
+mat-dialog-content {
+max-height: 100%;
+overflow-y: scroll;
+scrollbar-color: #0078D4 #f1f1f1;
+scrollbar-width: thin;
+}
+/* Estilo para los campos de entrada */
+.form-field {
+width: 100%;
+}
+mat-dialog-actions {
+margin-top: 16px;
+display: flex; /* Activa flexbox */
+justify-content: center; /* Centra los botones horizontalmente */
+gap: 16px; /* Espaciado entre los botones */
+}
+/* Estilo del scroll en navegadores basados en WebKit */
+mat-dialog-content::-webkit-scrollbar {
+width: 8px;
+}
+mat-dialog-content::-webkit-scrollbar-thumb {
+background-color: #0078D4;
+border-radius: 4px;
+}
+mat-dialog-content::-webkit-scrollbar-thumb:hover {
+background-color: #005A9E;
+}
+mat-dialog-content::-webkit-scrollbar-track {
+background-color: #f1f1f1;
+border-radius: 4px;
+}
+.close-button {
+background-color: #D32F2F;
+color: white;
+font-weight: bold;
+border: none;
+border-radius: 4px;
+padding: 8px 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+.close-button:hover {
+background-color: #B71C1C;
+}
+.save-button {
+background-color: #388E3C;
+color: white;
+font-weight: bold;
+border: none;
+border-radius: 4px;
+padding: 8px 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+margin-left: 16px;
+}
+.save-button:hover {
+background-color: #2E7D32;
+}
+.error-card {
+background-color: #f8d7da;
+color: #721c24;
+padding: 16px;
+margin-bottom: 16px;
+border: 1px solid #f5c6cb;
+border-radius: 4px;
+}
+.error-card ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+.error-card li {
+margin: 4px 0;
+}

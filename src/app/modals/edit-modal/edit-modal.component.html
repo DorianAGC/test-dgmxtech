@@ -1,0 +1,83 @@
+<mat-card appearance="outlined">
+  <mat-card-content>
+    <h1 mat-dialog-title>
+      {{ isEditMode ? "Editar Libro" : "Nuevo Libro" }}
+    </h1>
+    <!-- Mostrar mensajes de error generales -->
+    <mat-card *ngIf="formErrors.length > 0" class="error-card">
+      <ul>
+        <li *ngFor="let error of formErrors">{{ error }}</li>
+      </ul>
+    </mat-card>
+    <form (ngSubmit)="onSubmit(editForm)" #editForm="ngForm" novalidate>
+      <div mat-dialog-content>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>ISBN</mat-label>
+          <input
+            matInput
+            required
+            [value]="isEditMode ? data.isbn : ''"
+            id="isbnInput"
+            [(ngModel)]="isbn"
+            name="isbn"
+            required
+            #isbnInput="ngModel"
+            [autofocus]="false"
+            [attr.autofocus]="null"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Name</mat-label>
+          <input
+            matInput
+            required
+            [value]="isEditMode ? data.name : ''"
+            id="nameInput"
+            [(ngModel)]="name"
+            name="name"
+            required
+            #nameInput="ngModel"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Estatus</mat-label>
+          <input
+            matInput
+            required
+            [value]="isEditMode ? data.estatus : ''"
+            id="estatusInput"
+            [(ngModel)]="estatus"
+            name="estatus"
+            required
+            #estatusInput="ngModel"
+            [autofocus]="false"
+          />
+        </mat-form-field>
+    
+
+          <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Categoria</mat-label>
+          <input
+            matInput
+            required
+            [value]="isEditMode ? data.id_categoria : ''"
+            id="categoriaInput"
+            [(ngModel)]="categoria"
+            name="categoria"
+            required
+            #categoriaInput="ngModel"
+            [autofocus]="false"
+          />
+        </mat-form-field>
+      </div>
+      <div mat-dialog-actions>
+        <button mat-button type="button" class="close-button" (click)="close()">
+          Cerrar
+        </button>
+        <button mat-button type="submit" class="save-button">
+          {{ isEditMode ? "Guardar Cambios" : "Crear" }}
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

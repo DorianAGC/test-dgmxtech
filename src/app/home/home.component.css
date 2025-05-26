@@ -1,0 +1,135 @@
+.filter-and-button-container {
+margin: 100px;
+display: flex; /* Alinea los elementos en una fila */
+align-items: center; /* Centra verticalmente los elementos */
+gap: 16px; /* Espaciado entre el filtro y el botón */
+}
+.card-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100vw;
+background-color: white;
+color: white;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+/* Tarjeta personalizada */
+.custom-card {
+width: 80%;
+max-width: 800px;
+padding: 20px;
+background-color: white;
+color: black;
+border-radius: 8px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Contenedor del encabezado */
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+/* Contenedor del filtro */
+.filter-container {
+margin-top: 80px;
+margin-bottom: 20px;
+display: flex;
+justify-content: flex-start;
+}
+/* Botón de nuevo registro */
+.new-record-btn {
+background-color: #0053E2;
+color: white;
+border: none;
+border-radius: 8px;
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+white-space: nowrap;
+transition: background-color 0.3s ease;
+}
+.new-record-btn:hover {
+background-color: #003a99;
+}
+/* Campo de búsqueda */
+.search-field {
+flex-grow: 0;
+width: 200px;
+margin-left: 10px;
+}
+.search-field input {
+font-size: 14px;
+padding: 6px 10px;
+}
+/* Contenedor de la tabla */
+.table-container {
+overflow-x: auto;
+}
+/* Tabla con bordes */
+.bordered-table {
+width: 100%;
+border-collapse: collapse;
+}
+.bordered-table th,
+.bordered-table td {
+border: 1px solid #ddd;
+padding: 8px;
+}
+.bordered-table th {
+background-color: #f4f4f4;
+text-align: left;
+}
+.status-published {
+background-color: #d4edda;
+color: #155724;
+padding: 5px 10px;
+border-radius: 4px;
+font-weight: bold;
+display: inline-block;
+}
+/* Estilo para el estado "No Publicado" */
+.status-unpublished {
+background-color: #f7b995;
+color: #571515;
+padding: 5px 10px;
+border-radius: 4px;
+font-weight: bold;
+display: inline-block;
+}
+
+.status-prestado {
+background-color: rgb(247, 247, 135);
+color: #565715;
+padding: 5px 10px;
+border-radius: 4px;
+font-weight: bold;
+display: inline-block;
+}
+.btn-visibility {
+color: #6c747b;
+background-color: transparent;
+border: none;
+}
+.btn-visibility:hover {
+color: rgb(50, 54, 58);
+}
+.btn-edit {
+color: #007bff;
+background-color: transparent;
+border: none;
+}
+.btn-edit:hover {
+color: #0056b3;
+}
+.btn-delete {
+color: red;
+background-color: transparent;
+border: none;
+}
+.btn-delete:hover {
+color: darkred;
+}
